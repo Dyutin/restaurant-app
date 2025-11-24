@@ -1,0 +1,69 @@
+<html>
+    <head>
+       <link rel="stylesheet" href="index.css">
+       <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Smythe" />
+       <link rel="preconnect" href="https://rsms.me/">
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="branding">
+                    <h1>Jimmy’s Diner</h1>
+                    <p>The best burgers and pizzas in town.</p>
+                </div>
+            </header>
+        <main>
+            <section class="ordering-section">
+                <div class="menu">
+                    <div class="food-item">
+                        <p class="food-icon">🍕</p>
+                        <div class="food-info">
+                            <h2>Pizza</h2>
+                            <p class="sub-heading">pepperoni,mushrom,mozarella</p>
+                            <h2>$14</h2>
+                        </div>
+                        <button class="add-btn" data-item = "pizza" data-price="14"><span>+</span></button>
+                    </div>
+                    <hr>
+                    <div class="food-item">
+                        <p class="food-icon">🍔</p>
+                        <div class="food-info">
+                            <h2>Hamburger</h2>
+                            <p class="sub-heading">beef, cheese, lettuce</p>
+                            <h2>$12</h2>
+                        </div>
+                        <button class="add-btn" data-item = "hamburger" data-price="12"><span>+</span></button>
+                    </div>
+                    <hr>
+                    <div class="food-item">
+                        <p class="food-icon">🍺</p>
+                        <div class="food-info">
+                            <h2>Beer</h2>
+                            <p class="sub-heading">grain, hops, yeast, water</p>
+                            <h2>$12</h2>
+                        </div>
+                        <button class="add-btn" data-item = "beer" data-price="12"><span>+</span></button>
+                    </div>
+                    <hr>
+                </div>
+            </section>
+            <section class="order-invoice" id="order-invoice">
+                <h2>Your order</h2>
+                <div id="order-list">
+    
+                </div> 
+                <hr>
+                <div class="cart-item">
+                    <h2>Total Price</h2> <span id="total-price-span">$14</span>
+                </div>
+                <button class="order-btn">Complete order</button>
+
+            </section>
+        </main>
+        </div>
+	    <script src="index.js" type="module"></script>
+    </body>
+</html>
+

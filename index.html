@@ -14,55 +14,73 @@
                     <p>The best burgers and pizzas in town.</p>
                 </div>
             </header>
-        <main>
-            <section class="ordering-section">
-                <div class="menu">
-                    <div class="food-item">
-                        <p class="food-icon">🍕</p>
-                        <div class="food-info">
-                            <h2>Pizza</h2>
-                            <p class="sub-heading">pepperoni,mushrom,mozarella</p>
-                            <h2>$14</h2>
+            <main>
+                <section class="ordering-section">
+                    <div class="menu">
+                        <div class="food-item">
+                            <p class="food-icon">🍕</p>
+                            <div class="food-info">
+                                <h2>Pizza</h2>
+                                <p class="sub-heading">pepperoni,mushrom,mozarella</p>
+                                <h2>$14</h2>
+                            </div>
+                            <button class="add-btn" data-item = "pizza" data-price="14"><span>+</span></button>
                         </div>
-                        <button class="add-btn" data-item = "pizza" data-price="14"><span>+</span></button>
-                    </div>
-                    <hr>
-                    <div class="food-item">
-                        <p class="food-icon">🍔</p>
-                        <div class="food-info">
-                            <h2>Hamburger</h2>
-                            <p class="sub-heading">beef, cheese, lettuce</p>
-                            <h2>$12</h2>
+                        <hr>
+                        <div class="food-item">
+                            <p class="food-icon">🍔</p>
+                            <div class="food-info">
+                                <h2>Hamburger</h2>
+                                <p class="sub-heading">beef, cheese, lettuce</p>
+                                <h2>$12</h2>
+                            </div>
+                            <button class="add-btn" data-item = "hamburger" data-price="12"><span>+</span></button>
                         </div>
-                        <button class="add-btn" data-item = "hamburger" data-price="12"><span>+</span></button>
-                    </div>
-                    <hr>
-                    <div class="food-item">
-                        <p class="food-icon">🍺</p>
-                        <div class="food-info">
-                            <h2>Beer</h2>
-                            <p class="sub-heading">grain, hops, yeast, water</p>
-                            <h2>$12</h2>
+                        <hr>
+                        <div class="food-item">
+                            <p class="food-icon">🍺</p>
+                            <div class="food-info">
+                                <h2>Beer</h2>
+                                <p class="sub-heading">grain, hops, yeast, water</p>
+                                <h2>$12</h2>
+                            </div>
+                            <button class="add-btn" data-item = "beer" data-price="12"><span>+</span></button>
                         </div>
-                        <button class="add-btn" data-item = "beer" data-price="12"><span>+</span></button>
+                        <hr>
                     </div>
+                </section>
+                <section class="order-invoice" id="order-invoice">
+                    <h2>Your order</h2>
+                    <div id="order-list">
+        
+                    </div> 
                     <hr>
-                </div>
-            </section>
-            <section class="order-invoice" id="order-invoice">
-                <h2>Your order</h2>
-                <div id="order-list">
-    
-                </div> 
-                <hr>
-                <div class="cart-item">
-                    <h2>Total Price</h2> <span id="total-price-span">$14</span>
-                </div>
-                <button class="order-btn">Complete order</button>
+                    <div class="cart-item">
+                        <h2>Total Price</h2> <span id="total-price-span">$14</span>
+                    </div>
+                    <button class="order-btn">Complete order</button>
 
-            </section>
-        </main>
+                </section>
+                <section id="payment-confirm">
+                    <div class="payment-confirm">
+                        <h2>Thanks, James! Your order is on its way!</h2>
+                    </div>
+                </section>
+                <div class="modal" id="modal">
+                    <h3>Enter card details</h3>
+                    <form id="card-details">
+                        <input type="name" name="fullName" placeholder="Enter your name" required/>
+                        <input type="card-num" inputmode="numeric" name="email" placeholder="Entercard number" required/>
+                        <input type="cvv" inputmode="numeric" name="cvv" placeholder="Entercard CVV" required/>
+
+                        <button type="submit" class="pay-btn">Pay</button>   
+                        </div>
+                    </form>
+                </div>
+                
+            </main>
         </div>
+
 	    <script src="index.js" type="module"></script>
     </body>
 </html>

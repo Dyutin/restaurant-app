@@ -3,6 +3,10 @@ const orderInvoice = document.getElementById('order-invoice')
 const totalPriceSpan = document.getElementById('total-price-span')
 let totalPrice = 0
 const orderList = document.getElementById('order-list')
+const paymentConfirm = document.getElementById('payment-confirm')
+const cardForm = document.getElementById('card-details')
+const orderBtn = document.getElementsByClassName('order-btn')[0]
+const modal = document.getElementById('modal')
 addBtns.forEach(function(btn){
     btn.addEventListener('click', addtoCart)
 })
@@ -11,6 +15,7 @@ function addtoCart(e){
     if(orderInvoice.style.display != 'block'){
         orderInvoice.style.display = 'block'
         orderList.addEventListener('click', removeFromCart)
+        paymentConfirm.style.display = 'none'
     }
 
     const item = e.currentTarget.dataset.item
@@ -50,3 +55,14 @@ function calculateTotalPrice(price){
     totalPrice+=price
     totalPriceSpan.textContent = "$" + totalPrice
 }
+
+cardForm.addEventListener('submit', function (e){
+    e.preventDefault()
+    modal.style.display = 'none'
+    orderInvoice.style.display = 'none'
+    paymentConfirm.style.display = 'block'
+})
+
+orderBtn.addEventListener('click', function(){
+    modal.style.display = 'flex'
+})
